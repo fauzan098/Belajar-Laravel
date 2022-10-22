@@ -1,0 +1,78 @@
+pakai tinker 
+
+PS C:\laragon\www\applications\coba-laravel> php artisan tinker
+Psy Shell v0.11.8 (PHP 8.1.6 — cli) by Justin Hileman
+>>> $user = new User;                                                                                                                                                                                    
+[!] Aliasing 'User' to 'App\Models\User' for this Tinker session.
+=> App\Models\User {#3671}
+
+>>> $user->name = 'fauzan';                                                                                                                                                                              
+=> "fauzan"
+
+>>> $user->email = 'fauzan@mail.com'                                                                                                                                                                     
+=> "fauzan@mail.com"
+
+>>> $user->password = 'fauzan123'                                                                                                                                                                        
+=> "fauzan123"
+
+>>> $user->save()                                                                                                                                                                                        
+=> true
+
+>>> $user->all()                                                                                                                                                                                         
+=> Illuminate\Database\Eloquent\Collection {#4364
+     all: [
+       App\Models\User {#4615
+         email: "fauzan@mail.com",
+         email_verified_at: null,
+         #password: "fauzan123",
+         #remember_token: null,
+         created_at: "2022-10-15 14:47:55",
+         updated_at: "2022-10-15 14:47:55",
+       },
+     ],
+   }
+
+>>> $user->name = 'aan';                                                                                                                                                                                 
+=> "aan"
+
+>>> $user->email = 'aan@mail.com';                                                                                                                                                                       
+=> "aan@mail.com"
+
+>>> $user->password = bcrypt('aan');                                                                                                                                                                     
+=> "$2y$10$gCQYh.K5MaXkMmCGnmDkk.Uw8k94X7lYBC23km/wJfXmjdVuOuotC"
+
+>>> $user->save()                                                                                                                                                                                        
+=> true
+
+>>> $user->all()                                                                                                                                                                                         
+=> Illuminate\Database\Eloquent\Collection {#4618
+     all: [
+       App\Models\User {#4617
+         id: 1,
+         name: "aan",
+         email: "aan@mail.com",
+         email_verified_at: null,
+         #password: "$2y$10$gCQYh.K5MaXkMmCGnmDkk.Uw8k94X7lYBC23km/wJfXmjdVuOuotC",
+         #remember_token: null,
+         created_at: "2022-10-15 14:47:55",
+         updated_at: "2022-10-15 14:52:18",
+       },
+     ],
+   }
+
+>>> $user->first()                                                                                                                                                                                       
+=> App\Models\User {#4621
+     id: 1,
+     name: "aan",
+     email: "aan@mail.com",
+     email_verified_at: null,
+     #password: "$2y$10$gCQYh.K5MaXkMmCGnmDkk.Uw8k94X7lYBC23km/wJfXmjdVuOuotC",
+     #remember_token: null,
+     created_at: "2022-10-15 14:47:55",
+     updated_at: "2022-10-15 14:52:18",
+   }
+
+>>>                                                                                                                                                                                                      
+PS C:\laragon\www\applications\coba-laravel>
+
+Eloquent relational -> mengelola hubungan antar table menggunakan fitur Eloquent dalam laravel 
