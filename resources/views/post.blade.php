@@ -5,7 +5,7 @@
     <article>
         <h1>{{ $post->title }}</h1>
 
-        <p>By. Muhammad Arif Fauzan in <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></p>
+        <p>By. <a href="/authors/{{ $post->author->username }}"></a> in <a href="/categories/{{ $post->category->slug }}" class="me-2" >{{ $post->author->name }}</a>{{ $post->category->name }}</p>
 
         {!! $post->body !!}
     </article>
