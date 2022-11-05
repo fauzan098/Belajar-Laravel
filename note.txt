@@ -76,3 +76,5 @@ Psy Shell v0.11.8 (PHP 8.1.6 — cli) by Justin Hileman
 PS C:\laragon\www\applications\coba-laravel>
 
 Eloquent relational -> mengelola hubungan antar table menggunakan fitur Eloquent dalam laravel 
+
+//membuat controller di terminal : php artisan make:controller LoginController.
