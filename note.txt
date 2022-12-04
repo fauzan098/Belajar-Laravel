@@ -78,3 +78,5 @@ PS C:\laragon\www\applications\coba-laravel>
 Eloquent relational -> mengelola hubungan antar table menggunakan fitur Eloquent dalam laravel 
 
 //membuat controller di terminal : php artisan make:controller LoginController.
+
+strips_tags berguna untuk menghilangkan tag html ketika input ke database
