@@ -42,13 +42,26 @@ class DashboardPostController extends Controller
      */
     public function store(Request $request)
     {
+        // fungsi store dibawah mengembalikan pathnya selain mamasukkan atau mengupload fotonya 
+        // return $request->file('image')->store('post-images');
+
+        // menampilkan data yang di inputkan
         // return $request;
+
+        // dump die debug
+        // ddd($request);
         $validatedData = $request->validate([
             'title' => 'required|max:255',
             'slug' => 'required|unique:posts',
             'category_id' => 'required',
+            'image' => 'image|file|max:1024',
             'body' => 'required'
         ]);
+
+        // cek gambar ada isi nya maka gambar akan disimpan dalam folder post images di local
+        if($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('post-images');
+        }
 
         $validatedData['user_id'] = auth()->user()->id;
         $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200);

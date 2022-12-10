@@ -80,3 +80,9 @@ Eloquent relational -> mengelola hubungan antar table menggunakan fitur Eloquent
 //membuat controller di terminal : php artisan make:controller LoginController.
 
 strips_tags berguna untuk menghilangkan tag html ketika input ke database
+
+10/12/2022 upload image
+
+fungsi store pada method store buat image adalah mengembalikan path
+
+php artisan migrate:fresh --seed ->
