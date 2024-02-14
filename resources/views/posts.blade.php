@@ -1,6 +1,3 @@
-{{-- ini buat melihat dari variable, object atau array --}}
-{{-- @dd($posts) --}}
-
 @extends('layouts.main')
 
 @section('container')
